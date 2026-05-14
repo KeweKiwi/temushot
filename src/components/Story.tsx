@@ -38,22 +38,35 @@ export function Story() {
           <p className="mt-6 font-black text-orange">Tradition meets modern wellness.</p>
         </div>
 
-        <div className="relative min-h-[320px] overflow-hidden rounded-[1.5rem] md:min-h-[460px]">
-          <Image
-            src="/images/temushot1.png"
-            alt="Temu Shot product with temulawak and herbal elements"
-            fill
-            sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover"
-          />
-          <Image
-            src="/images/temulawak-leaf.png"
-            width={332}
-            height={755}
-            alt=""
-            className="pointer-events-none absolute -bottom-3 -right-3 w-20 rotate-12 opacity-50 md:w-28"
-          />
-        </div>
+        <Reveal delay={0.1} className="relative min-h-[420px] overflow-hidden rounded-[1.75rem] border border-orange/10 bg-gradient-to-br from-white via-cream to-butter/30 md:min-h-[500px]">
+          <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange/24 blur-3xl md:h-96 md:w-96" />
+          <div className="absolute left-1/2 top-[52%] h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full border border-orange/15" />
+          <div className="absolute left-1/2 top-[52%] h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full border border-saffron/25" />
+          <div className="story-bottle-floor absolute left-1/2 top-[78%] h-20 w-64 -translate-x-1/2 rounded-full bg-cocoa/16 blur-2xl md:w-80" />
+          <div className="absolute inset-x-12 top-10 h-px bg-gradient-to-r from-transparent via-orange/30 to-transparent" />
+          <div className="absolute -right-16 top-10 h-48 w-48 rounded-full bg-saffron/18 blur-3xl" />
+
+          <div className="group absolute inset-0 z-10 grid place-items-center">
+            <div className="story-bottle-float">
+              <div className="relative transition duration-700 ease-out group-hover:rotate-[3deg] group-hover:scale-[1.07]">
+                <div className="story-bottle-shadow absolute left-1/2 top-[73%] h-14 w-52 -translate-x-1/2 rounded-full bg-cocoa/20 blur-2xl transition duration-700 group-hover:w-64 group-hover:bg-burnt/26" />
+                <div className="story-bottle-glow absolute left-1/2 top-12 h-72 w-40 -translate-x-1/2 rounded-full bg-white/34 blur-2xl" />
+                <div className="pointer-events-none absolute left-[58%] top-16 z-20 h-[68%] w-10 overflow-hidden rounded-full opacity-80 mix-blend-screen">
+                  <div className="h-full w-full animate-soft-shine bg-gradient-to-r from-transparent via-white/80 to-transparent" />
+                </div>
+                <Image
+                  src="/images/product-bottle-tight.png"
+                  width={620}
+                  height={900}
+                  alt="Botol Temu Shot"
+                  priority
+                  sizes="(min-width: 768px) 330px, 72vw"
+                  className="relative z-10 w-[230px] drop-shadow-[0_34px_54px_rgba(93,46,24,0.28)] transition duration-700 ease-out group-hover:drop-shadow-[0_46px_76px_rgba(184,81,27,0.38)] sm:w-[260px] md:w-[300px] lg:w-[330px]"
+                />
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </Reveal>
     </section>
   );

@@ -56,6 +56,75 @@ textarea {
   text-wrap: balance;
 }
 
+.story-bottle-float {
+  animation: storyBottleFloat 3.4s cubic-bezier(0.45, 0, 0.2, 1) infinite;
+  transform-origin: 50% 72%;
+  will-change: transform;
+}
+
+.story-bottle-shadow {
+  animation: storyBottleShadow 3.4s ease-in-out infinite;
+  will-change: transform, opacity, filter;
+}
+
+.story-bottle-floor {
+  animation: storyBottleFloor 3.4s ease-in-out infinite;
+  will-change: transform, opacity, filter;
+}
+
+.story-bottle-glow {
+  animation: storyBottleGlow 3.4s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes storyBottleFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 18px, 0) rotate(-3.2deg);
+  }
+  50% {
+    transform: translate3d(0, -26px, 0) rotate(3.2deg);
+  }
+}
+
+@keyframes storyBottleShadow {
+  0%,
+  100% {
+    opacity: 0.34;
+    transform: translateX(-50%) translateY(20px) scaleX(1.08) scaleY(0.72);
+    filter: blur(24px);
+  }
+  50% {
+    opacity: 0.16;
+    transform: translateX(-50%) translateY(42px) scaleX(0.74) scaleY(0.5);
+    filter: blur(30px);
+  }
+}
+
+@keyframes storyBottleFloor {
+  0%,
+  100% {
+    opacity: 0.22;
+    transform: translateX(-50%) scaleX(1.08);
+  }
+  50% {
+    opacity: 0.12;
+    transform: translateX(-50%) scaleX(0.78);
+  }
+}
+
+@keyframes storyBottleGlow {
+  0%,
+  100% {
+    opacity: 0.42;
+    transform: translateX(-50%) scale(0.95);
+  }
+  50% {
+    opacity: 0.68;
+    transform: translateX(-50%) scale(1.08);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { Instagram, Mail, MessageCircle, Music2 } from "lucide-react";
+import { ArrowRight, Instagram, Mail, MessageCircle, Music2 } from "lucide-react";
 import { FormEvent, useState } from "react";
 import { contacts } from "@/data/site";
 import { Reveal } from "./Reveal";
+import { JamoeIboeLogo } from "./JamoeIboeLogo";
 
 export function Contact() {
   const [sent, setSent] = useState(false);
@@ -26,10 +27,17 @@ export function Contact() {
       />
       <Reveal className="section-shell warm-card relative grid gap-8 overflow-hidden rounded-[2rem] p-6 md:grid-cols-[0.9fr_1.1fr] md:p-10">
         <div className="flex flex-col justify-center">
-          <h2 className="text-4xl font-black leading-tight text-cocoa md:text-5xl">Ready to Start Small?</h2>
+          <JamoeIboeLogo />
+          <h2 className="mt-6 text-4xl font-black leading-tight text-cocoa md:text-5xl">Ayo mulai dari satu shot hari ini.</h2>
           <p className="mt-4 text-base leading-8 text-cocoa/70">
-            Punya pertanyaan atau ingin tahu lebih lanjut tentang Temu Shot?
+            Menjaga kesehatan tidak harus ribet. Jadikan Temu Shot bagian kecil dari rutinitas harianmu.
           </p>
+          <a
+            href={contacts.instagramUrl}
+            className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-orange px-6 py-4 text-sm font-black text-white shadow-glow transition hover:-translate-y-1 hover:bg-burnt"
+          >
+            Coba Temu Shot Sekarang <ArrowRight size={17} />
+          </a>
           <div className="mt-7 space-y-3 text-sm font-bold text-cocoa/78">
             <a href={contacts.instagramUrl} className="flex items-center gap-3 transition hover:text-orange">
               <Instagram size={18} className="text-orange" /> {contacts.instagram}

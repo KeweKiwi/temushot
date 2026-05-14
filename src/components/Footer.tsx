@@ -1,5 +1,6 @@
 import { Instagram, Mail, Music2 } from "lucide-react";
 import { contacts, navItems } from "@/data/site";
+import { JamoeIboeLogo } from "./JamoeIboeLogo";
 
 export function Footer() {
   return (
@@ -8,6 +9,9 @@ export function Footer() {
         <div>
           <h2 className="text-2xl font-black tracking-[0.16em]">TEMU SHOT</h2>
           <p className="mt-2 text-sm font-semibold text-cream/78">Happy Gut, Happy Tummy</p>
+          <div className="mt-5">
+            <JamoeIboeLogo light />
+          </div>
           <div className="mt-5 flex gap-3">
             <a href={contacts.instagramUrl} aria-label="Instagram" className="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition hover:bg-white/20">
               <Instagram size={18} />

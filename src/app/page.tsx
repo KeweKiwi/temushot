@@ -9,6 +9,7 @@ import { Lifestyle } from "@/components/Lifestyle";
 import { Navbar } from "@/components/Navbar";
 import { ProductHighlight } from "@/components/ProductHighlight";
 import { Story } from "@/components/Story";
+import { Team } from "@/components/Team";
 import { Testimonials } from "@/components/Testimonials";
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
         <InteractiveQuiz />
         <Testimonials />
         <BlogPreview />
+        <Team />
         <Contact />
       </main>
       <Footer />

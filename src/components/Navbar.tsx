@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useState } from "react";
 import { navItems } from "@/data/site";
+import { JamoeIboeLogo } from "./JamoeIboeLogo";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -14,17 +15,18 @@ export function Navbar() {
     <header className="fixed left-0 right-0 top-0 z-50 px-4 pt-4">
       <motion.div className="absolute left-0 top-0 h-1 origin-left bg-orange" style={{ scaleX }} />
       <nav className="section-shell warm-card flex items-center justify-between rounded-full px-4 py-3 md:px-6">
-        <a href="#home" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="grid h-10 w-10 place-items-center rounded-full bg-cream text-orange shadow-sm">
-            <span className="h-5 w-5 rounded-full border-2 border-orange border-r-saffron" />
-          </span>
+        <a href="#home" className="flex items-center gap-4" onClick={() => setOpen(false)}>
           <span>
             <span className="block text-sm font-black tracking-[0.12em] text-cocoa">TEMU SHOT</span>
-            <span className="block text-[11px] font-semibold text-clay">by Jamoe Iboe</span>
+            <span className="block text-[11px] font-semibold text-clay">Happy Gut, Happy Tummy</span>
+          </span>
+          <span className="hidden h-8 w-px bg-orange/15 sm:block" />
+          <span className="hidden sm:block">
+            <JamoeIboeLogo compact />
           </span>
         </a>
 
-        <div className="hidden items-center gap-7 text-sm text-cocoa md:flex">
+        <div className="hidden items-center gap-5 text-sm text-cocoa md:flex">
           {navItems.map((item) => (
             <a key={item.href} href={item.href} className="font-semibold transition hover:text-orange">
               {item.label}
