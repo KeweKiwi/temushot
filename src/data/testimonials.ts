@@ -1,26 +1,26 @@
 export const testimonials = [
   {
-    quote: "Aku biasanya gampang begah, tapi setelah coba Temu Shot jadi lebih ringan.",
-    name: "Kenzie Elleaxis",
-    role: "Mahasiswa",
-    image: "/images/team/kenzie.jpg"
+    quote: "Biasanya kalau habis makan telat aku gampang begah. Temu Shot enak karena tinggal minum satu botol, rasanya juga nggak sekuat jamu yang aku bayangin.",
+    name: "Aulia Rahma",
+    role: "Mahasiswa tingkat akhir",
+    highlight: "Makan telat"
   },
   {
-    quote: "Praktis banget buat dibawa kuliah. Tinggal shake, buka, langsung minum.",
-    name: "Ameylia Permata",
-    role: "Busy Student",
-    image: "/images/team/ameylia.jpg"
+    quote: "Aku sering bawa ke kantor karena ukurannya kecil dan nggak ribet. Cocok buat rutinitas pagi sebelum mulai kerja.",
+    name: "Raka Pratama",
+    role: "Junior graphic designer",
+    highlight: "Busy morning"
   },
   {
-    quote: "Rasanya lebih friendly daripada jamu yang aku bayangkan.",
-    name: "Nathania Abigail",
-    role: "Gen Z Customer",
-    image: "/images/team/nathania.jpg"
+    quote: "Aku bukan tipe yang suka jamu, tapi Temu Shot masih friendly diminum. Botol kecilnya bikin terasa modern dan nggak intimidating.",
+    name: "Nadya Putri",
+    role: "Content creator freelance",
+    highlight: "First-time jamu"
   },
   {
-    quote: "Cocok buat aku yang aktivitasnya padat dan sering lupa jaga pola makan.",
-    name: "Kin Andrea",
-    role: "Young Worker",
-    image: "/images/team/kin-andrea.png"
+    quote: "Jadwal shift kadang bikin pola makan kacau. Temu Shot jadi reminder kecil buat tetap mulai jaga badan dari hal simple.",
+    name: "Dimas Saputra",
+    role: "Barista part-time",
+    highlight: "Shift life"
   }
 ];
