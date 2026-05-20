@@ -20,7 +20,7 @@ export function Team() {
             <Reveal
               key={member.name}
               delay={index * 0.06}
-              className="group overflow-hidden rounded-[1.7rem] border border-orange/12 bg-white/78 shadow-soft transition hover:-translate-y-2 hover:bg-white"
+              className="premium-lift premium-shine group overflow-hidden rounded-[1.7rem] border border-orange/12 bg-white/78 shadow-soft transition hover:bg-white"
             >
               <div className="relative aspect-[4/5] overflow-hidden bg-gradient-to-br from-butter/70 to-orange/20">
                 {member.image ? (

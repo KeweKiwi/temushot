@@ -16,6 +16,10 @@ html {
   scroll-behavior: smooth;
 }
 
+[id] {
+  scroll-margin-top: 104px;
+}
+
 body {
   margin: 0;
   background:
@@ -52,8 +56,103 @@ textarea {
   background: linear-gradient(135deg, #ee7623 0%, #f8b629 100%);
 }
 
+.premium-lift {
+  transform: translateZ(0);
+  transition:
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 520ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.premium-lift:hover {
+  transform: translateY(-8px) scale(1.012);
+  box-shadow: 0 32px 90px rgba(119, 67, 22, 0.18);
+}
+
+.premium-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-shine::after {
+  content: "";
+  position: absolute;
+  inset: -45%;
+  z-index: 1;
+  background: linear-gradient(115deg, transparent 38%, rgba(255, 255, 255, 0.42) 48%, transparent 58%);
+  opacity: 0;
+  transform: translateX(-58%) rotate(8deg);
+  transition:
+    opacity 420ms ease,
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.premium-shine:hover::after {
+  opacity: 1;
+  transform: translateX(58%) rotate(8deg);
+}
+
+.premium-float {
+  animation: premiumFloat 5.4s ease-in-out infinite;
+  transform-origin: 50% 58%;
+  will-change: transform;
+}
+
+.premium-breathe {
+  animation: premiumBreathe 4.8s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.premium-cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 0%, rgba(255, 255, 255, 0.28) 38%, transparent 62%);
+  transform: translateX(-120%);
+  transition: transform 780ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.premium-cta:hover::before {
+  transform: translateX(120%);
+}
+
 .text-balance {
   text-wrap: balance;
+}
+
+.temu-desktop-nav,
+.temu-desktop-cta {
+  display: none;
+}
+
+.temu-mobile-menu-button {
+  display: grid;
+}
+
+.temu-mobile-menu-panel {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .temu-desktop-nav {
+    display: flex !important;
+  }
+
+  .temu-desktop-cta {
+    display: inline-flex !important;
+  }
+
+  .temu-mobile-menu-button,
+  .temu-mobile-menu-panel {
+    display: none !important;
+  }
 }
 
 .story-bottle-float {
@@ -122,6 +221,28 @@ textarea {
   50% {
     opacity: 0.68;
     transform: translateX(-50%) scale(1.08);
+  }
+}
+
+@keyframes premiumFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0) rotate(0.8deg) scale(1.012);
+  }
+}
+
+@keyframes premiumBreathe {
+  0%,
+  100% {
+    opacity: 0.54;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.82;
+    transform: scale(1.04);
   }
 }
 

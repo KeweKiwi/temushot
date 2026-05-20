@@ -34,9 +34,11 @@ export function InteractiveQuiz() {
 
           <div className="mt-7 space-y-3">
             {questions.map((question, index) => (
-              <button
+              <motion.button
                 type="button"
                 key={question}
+                whileHover={{ x: 6, scale: 1.01 }}
+                whileTap={{ scale: 0.985 }}
                 onClick={() =>
                   setChecked((current) => current.map((value, itemIndex) => (itemIndex === index ? !value : value)))
                 }
@@ -50,7 +52,7 @@ export function InteractiveQuiz() {
                   {checked[index] ? <CheckCircle2 size={16} /> : null}
                 </span>
                 {question}
-              </button>
+              </motion.button>
             ))}
           </div>
         </div>
@@ -72,14 +74,15 @@ export function InteractiveQuiz() {
             key={result}
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
             className="mt-7 rounded-2xl bg-butter/45 p-5"
           >
             <p className="text-base font-black text-cocoa">{result}</p>
             <a
               href="#contact"
-              className="mt-5 inline-flex rounded-full bg-orange px-5 py-3 text-sm font-black text-white transition hover:bg-burnt"
+              className="premium-cta mt-5 inline-flex rounded-full bg-orange px-5 py-3 text-sm font-black text-white transition hover:bg-burnt"
             >
-              Start small with Temu Shot
+              <span className="relative z-10">Start small with Temu Shot</span>
             </a>
           </motion.div>
         </div>

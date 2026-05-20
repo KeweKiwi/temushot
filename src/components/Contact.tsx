@@ -34,9 +34,9 @@ export function Contact() {
           </p>
           <a
             href={contacts.instagramUrl}
-            className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-orange px-6 py-4 text-sm font-black text-white shadow-glow transition hover:-translate-y-1 hover:bg-burnt"
+            className="premium-cta mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-orange px-6 py-4 text-sm font-black text-white shadow-glow transition hover:-translate-y-1 hover:bg-burnt"
           >
-            Coba Temu Shot Sekarang <ArrowRight size={17} />
+            <span className="relative z-10 inline-flex items-center gap-2">Coba Temu Shot Sekarang <ArrowRight size={17} /></span>
           </a>
           <div className="mt-7 space-y-3 text-sm font-bold text-cocoa/78">
             <a href={contacts.instagramUrl} className="flex items-center gap-3 transition hover:text-orange">
@@ -64,7 +64,7 @@ export function Contact() {
               <p className="mt-2 text-sm font-bold text-cocoa/60">Your message has been received.</p>
             </div>
           ) : null}
-          <form onSubmit={onSubmit} className="grid gap-3 rounded-[1.5rem] bg-white/74 p-5 shadow-sm">
+          <form onSubmit={onSubmit} className="premium-lift grid gap-3 rounded-[1.5rem] bg-white/74 p-5 shadow-sm">
             <div className="grid gap-3 sm:grid-cols-2">
               <input
                 required
@@ -91,8 +91,8 @@ export function Contact() {
               placeholder="Message"
               className="resize-none rounded-2xl border border-orange/12 bg-cream/60 px-4 py-4 text-sm font-semibold outline-none transition focus:border-orange"
             />
-            <button className="rounded-full bg-orange px-6 py-4 text-sm font-black text-white shadow-glow transition hover:-translate-y-1 hover:bg-burnt">
-              Send Message
+            <button className="premium-cta rounded-full bg-orange px-6 py-4 text-sm font-black text-white shadow-glow transition hover:-translate-y-1 hover:bg-burnt">
+              <span className="relative z-10">Send Message</span>
             </button>
           </form>
         </div>

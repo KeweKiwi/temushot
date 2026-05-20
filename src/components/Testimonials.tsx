@@ -38,9 +38,10 @@ export function Testimonials() {
               key={testimonial.name}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -10, scale: 1.012 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: index * 0.07, duration: 0.55 }}
-              className="group relative min-h-[330px] overflow-hidden rounded-[1.75rem] border border-orange/14 bg-white/78 p-5 shadow-soft backdrop-blur transition hover:-translate-y-2 hover:border-orange/28 hover:bg-white hover:shadow-glow"
+              className="premium-shine group relative min-h-[330px] overflow-hidden rounded-[1.75rem] border border-orange/14 bg-white/78 p-5 shadow-soft backdrop-blur transition hover:border-orange/28 hover:bg-white hover:shadow-glow"
             >
               <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-saffron/20 blur-2xl transition group-hover:bg-orange/20" />
               <div className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-orange via-saffron to-butter opacity-70" />

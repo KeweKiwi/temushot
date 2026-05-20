@@ -56,9 +56,11 @@ export function Hero() {
           >
             <a
               href="#contact"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-orange px-7 py-4 text-sm font-black text-white shadow-glow transition hover:-translate-y-1 hover:bg-burnt"
+              className="premium-cta group inline-flex items-center justify-center gap-2 rounded-full bg-orange px-7 py-4 text-sm font-black text-white shadow-glow transition hover:-translate-y-1 hover:bg-burnt"
             >
-              Start Small Today <ArrowRight size={17} className="transition group-hover:translate-x-1" />
+              <span className="relative z-10 inline-flex items-center gap-2">
+                Start Small Today <ArrowRight size={17} className="transition group-hover:translate-x-1" />
+              </span>
             </a>
             <a
               href="#product"
@@ -77,7 +79,7 @@ export function Hero() {
             {badges.map((badge) => {
               const Icon = badge.icon;
               return (
-                <div key={badge.label} className="flex min-h-[66px] items-center gap-3 rounded-2xl border border-orange/10 bg-white/78 p-3 text-xs font-bold text-cocoa shadow-sm backdrop-blur transition hover:-translate-y-1 hover:border-orange/30">
+                <div key={badge.label} className="premium-lift flex min-h-[66px] items-center gap-3 rounded-2xl border border-orange/10 bg-white/78 p-3 text-xs font-bold text-cocoa shadow-sm backdrop-blur transition hover:border-orange/30">
                   <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-orange/10 text-orange">
                     <Icon className="h-5 w-5" />
                   </span>
@@ -94,7 +96,7 @@ export function Hero() {
           transition={{ delay: 0.12, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="relative min-h-[520px] md:min-h-[600px] lg:min-h-[610px]"
         >
-          <div className="absolute inset-x-2 bottom-0 top-0 overflow-hidden rounded-[2.25rem] border border-white/70 bg-white/66 shadow-soft backdrop-blur md:inset-x-0 md:rounded-[2.8rem]">
+          <div className="premium-shine absolute inset-x-2 bottom-0 top-0 overflow-hidden rounded-[2.25rem] border border-white/70 bg-white/66 shadow-soft backdrop-blur md:inset-x-0 md:rounded-[2.8rem]">
             <Image
               src="/images/temushot1.png"
               alt="Temu Shot dengan temulawak"

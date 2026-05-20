@@ -30,12 +30,13 @@ export function Benefits() {
             return (
               <motion.article
                 key={benefit.title}
+                whileHover={{ y: -10, scale: 1.015 }}
                 variants={{
                   hidden: { opacity: 0, y: 24 },
                   visible: { opacity: 1, y: 0 }
                 }}
                 transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-                className="group rounded-[1.5rem] border border-orange/10 bg-white/78 p-6 text-center shadow-soft transition hover:-translate-y-2 hover:bg-white"
+                className="premium-shine group rounded-[1.5rem] border border-orange/10 bg-white/78 p-6 text-center shadow-soft transition hover:bg-white"
               >
                 <span className="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-cream text-orange transition group-hover:rotate-3 group-hover:scale-105">
                   <Icon size={30} />

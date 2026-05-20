@@ -21,8 +21,8 @@ export function Lifestyle() {
               Dengan satu shot Temu Shot, kamu bisa mulai langkah kecil untuk rutinitas yang lebih
               sehat.
             </p>
-            <div className="mt-7 inline-flex rounded-full bg-orange px-5 py-3 text-sm font-black text-white shadow-glow">
-              Small Shot, Big Benefit.
+            <div className="premium-cta mt-7 inline-flex rounded-full bg-orange px-5 py-3 text-sm font-black text-white shadow-glow">
+              <span className="relative z-10">Small Shot, Big Benefit.</span>
             </div>
           </div>
 
@@ -30,7 +30,7 @@ export function Lifestyle() {
             {fitItems.map((item, index) => {
               const Icon = item.icon;
               return (
-                <Reveal key={item.text} delay={index * 0.05} className="flex items-center gap-4 rounded-2xl bg-white/72 p-4 shadow-sm">
+                <Reveal key={item.text} delay={index * 0.05} className="premium-lift flex items-center gap-4 rounded-2xl bg-white/72 p-4 shadow-sm">
                   <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-cream text-orange">
                     <Icon size={21} />
                   </span>
@@ -38,7 +38,7 @@ export function Lifestyle() {
                 </Reveal>
               );
             })}
-            <div className="rounded-2xl bg-butter/55 p-5 text-sm font-bold leading-7 text-cocoa/74 sm:col-span-2">
+            <div className="premium-shine rounded-2xl bg-butter/55 p-5 text-sm font-bold leading-7 text-cocoa/74 sm:col-span-2">
               <Check className="mb-3 h-6 w-6 text-orange" />
               Healthy does not have to be complicated. Start small, stay consistent.
             </div>
